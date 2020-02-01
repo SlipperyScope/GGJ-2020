@@ -31,7 +31,7 @@ public class CarController : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             carBody.AddForce(transform.up * power);
-            carBody.drag = friction;
+            //carBody.drag = friction;
         }
 
         if (Input.GetKey(KeyCode.Space))
@@ -42,13 +42,23 @@ public class CarController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(Vector3.forward * turnPower);
+            float modifiedTurnPower = turnPower * curSpeed.magnitude;
+            modifiedTurnPower = modifiedTurnPower > turnPower ? turnPower : modifiedTurnPower;
+            transform.Rotate(Vector3.forward * modifiedTurnPower);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(Vector3.forward * -turnPower);
+            float modifiedTurnPower = turnPower * curSpeed.magnitude;
+            modifiedTurnPower = modifiedTurnPower > turnPower ? turnPower : modifiedTurnPower;
+            transform.Rotate(Vector3.forward * -modifiedTurnPower);
         }
+
+        float driftForce = Vector2.Dot(carBody.velocity, carBody.GetRelativeVector(Vector2.left)) * 2.0f;
+        Vector2 relativeForce = Vector2.right * driftForce;
+        Debug.DrawLine(carBody.position, carBody.GetRelativePoint(relativeForce), Color.green);
+        carBody.AddForce(carBody.GetRelativeVector(relativeForce));
+
 
         noGas();
     }
