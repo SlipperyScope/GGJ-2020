@@ -26,8 +26,6 @@ public class CarController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.H) && !aSource.isPlaying)
         {
-            Debug.Log("Where's my horn?");
-            Debug.Log("audio source: " + this.GetComponent<AudioSource>());
             aSource.PlayOneShot(hornSound);
         }
         curSpeed = new Vector2(carBody.velocity.x, carBody.velocity.y);
@@ -35,19 +33,15 @@ public class CarController : MonoBehaviour
         {
             curSpeed = curSpeed.normalized;
             curSpeed *= maxSpeed;
+            carBody.velocity = curSpeed;
         }
 
-        if (Input.GetKey(KeyCode.W))
+        float inputForce = Input.GetAxis("Vertical");
+        if (inputForce < 0)
         {
-            carBody.AddForce(transform.up * power);
-            //carBody.drag = friction;
+            inputForce /= 2;
         }
-
-        if (Input.GetKey(KeyCode.Space))
-        {
-            carBody.AddForce(-(transform.up * power / 2));
-            carBody.drag = friction;
-        }
+        carBody.AddForce(transform.up * power * inputForce);
 
         if (Input.GetKey(KeyCode.A))
         {
@@ -65,7 +59,6 @@ public class CarController : MonoBehaviour
 
         float driftForce = Vector2.Dot(carBody.velocity, carBody.GetRelativeVector(Vector2.left)) * 2.0f;
         Vector2 relativeForce = Vector2.right * driftForce;
-        Debug.DrawLine(carBody.position, carBody.GetRelativePoint(relativeForce), Color.green);
         carBody.AddForce(carBody.GetRelativeVector(relativeForce));
 
         noGas();
