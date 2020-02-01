@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 8
-  maxSpeed: 500
+  maxSpeed: 10
   turnPower: 5
   friction: 3
   curSpeed: {x: 0, y: 0}
