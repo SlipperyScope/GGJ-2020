@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class MissionDispatcher : MonoBehaviour
+public class JobDispatcher : MonoBehaviour
 {
     [Header("Config")]
     [Tooltip("Time until first mission is dispatched")]
@@ -14,15 +13,21 @@ public class MissionDispatcher : MonoBehaviour
     [Range(0f, 300f)]
     public float DispatchDelay = 5f;
 
+    public Job CurrentJob { get; private set; }
+
     private bool ReadyForDispatch = false;
     private Coroutine DelayCoroutineRef;
 
-    public event EventHandler MissionDispatched;
-    private void OnMissionDispatched(MissionDispatchedEventArgs e)
+    #region Events
+
+    public event EventHandler JobDispatched;
+    private void OnJobDispatched(JobDispatchedEventArgs e)
     {
-        EventHandler handler = MissionDispatched;
+        EventHandler handler = JobDispatched;
         handler?.Invoke(this, e);
-    }
+    } 
+
+    #endregion
 
     /// <summary>
     /// Start
@@ -39,8 +44,17 @@ public class MissionDispatcher : MonoBehaviour
     {
         if (ReadyForDispatch == true)
         {
-
+            DispatchJob();
         }
+    }
+
+    /// <summary>
+    /// Dispatch Mission
+    /// </summary>
+    private void DispatchJob()
+    {
+        var Job = new Job(Time.time);
+        OnJobDispatched(new JobDispatchedEventArgs(Job));
     }
 
     /// <summary>
