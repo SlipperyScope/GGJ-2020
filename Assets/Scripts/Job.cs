@@ -17,23 +17,18 @@ public class Job : MonoBehaviour
     /// </summary>
     public Vector2 Jobsite { get; }
 
-    //TODO: make person object
-    /// <summary>
-    /// The thing you need to interact with the finish the job
-    /// </summary>
-    public object JobObjective { get; }
+    [Header("Config")]
+    [Tooltip("This thing you need to interact with to finisht the job")]
+    public GameObject Objective;
 
-    /// <summary>
-    /// Person who ejaculates the mission text when you come close
-    /// </summary>
-    public object Client { get; }
+    [Tooltip("The person who ejactulates the job description")]
+    public GameObject Client;
 
-    /// <summary>
-    /// Client's message text
-    /// </summary>
-    public string Blurb { get; } = "My name is A-dumb!";
+    [Tooltip("Job text")]
+    public string blurb = "My name is A'dumb!";
 
-    public object SolutionTool { get; }
+    [Tooltip("")]
+    public ToolScorePair[] Tools;
 
     #region Events
 
@@ -57,4 +52,13 @@ public class Job : MonoBehaviour
     {
         StartTime = Time;
     }
+}
+
+[System.Serializable]
+public class ToolScorePair
+{
+    [SerializeField]
+    public enum Tools { Dick, Cock}
+    public Tools Tool;
+    public float Value;
 }
