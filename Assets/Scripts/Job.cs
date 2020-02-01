@@ -27,7 +27,7 @@ public class Job : MonoBehaviour
     [Tooltip("Job text")]
     public string blurb = "My name is A'dumb!";
 
-    [Tooltip("")]
+    [Tooltip("Scoring tools for the job and their score\nUnspecified tool will default to a score of 0")]
     public ToolScorePair[] Tools;
 
     #region Events
@@ -52,13 +52,28 @@ public class Job : MonoBehaviour
     {
         StartTime = Time;
     }
+
+    /// <summary>
+    /// On Trigger Enter
+    /// </summary>
+    /// <param name="collision"></param>
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (gameObject.tag == "Player")
+        {
+            // Start "Minigame"
+        }
+    }
 }
 
+/// <summary>
+/// The tool that can be used and the score that tool will give
+/// </summary>
 [System.Serializable]
 public class ToolScorePair
 {
     [SerializeField]
     public enum Tools { Dick, Cock}
     public Tools Tool;
-    public float Value;
+    public float Score;
 }
