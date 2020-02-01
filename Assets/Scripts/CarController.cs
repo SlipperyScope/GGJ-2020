@@ -11,16 +11,25 @@ public class CarController : MonoBehaviour
 
     public Vector2 curSpeed;
     public Rigidbody2D carBody;
+    public AudioClip hornSound;
+    public AudioSource aSource;
 
     // Start is called before the first frame update
     void Start()
     {
         carBody = this.GetComponent<Rigidbody2D>();
+        aSource = this.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (Input.GetKey(KeyCode.H) && !aSource.isPlaying)
+        {
+            Debug.Log("Where's my horn?");
+            Debug.Log("audio source: " + this.GetComponent<AudioSource>());
+            aSource.PlayOneShot(hornSound);
+        }
         curSpeed = new Vector2(carBody.velocity.x, carBody.velocity.y);
         if (curSpeed.magnitude > maxSpeed)
         {
@@ -31,7 +40,7 @@ public class CarController : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             carBody.AddForce(transform.up * power);
-            carBody.drag = friction;
+            //carBody.drag = friction;
         }
 
         if (Input.GetKey(KeyCode.Space))
@@ -42,13 +51,22 @@ public class CarController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(Vector3.forward * turnPower);
+            float modifiedTurnPower = turnPower * curSpeed.magnitude;
+            modifiedTurnPower = modifiedTurnPower > turnPower ? turnPower : modifiedTurnPower;
+            transform.Rotate(Vector3.forward * modifiedTurnPower);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(Vector3.forward * -turnPower);
+            float modifiedTurnPower = turnPower * curSpeed.magnitude;
+            modifiedTurnPower = modifiedTurnPower > turnPower ? turnPower : modifiedTurnPower;
+            transform.Rotate(Vector3.forward * -modifiedTurnPower);
         }
+
+        float driftForce = Vector2.Dot(carBody.velocity, carBody.GetRelativeVector(Vector2.left)) * 2.0f;
+        Vector2 relativeForce = Vector2.right * driftForce;
+        Debug.DrawLine(carBody.position, carBody.GetRelativePoint(relativeForce), Color.green);
+        carBody.AddForce(carBody.GetRelativeVector(relativeForce));
 
         noGas();
     }
