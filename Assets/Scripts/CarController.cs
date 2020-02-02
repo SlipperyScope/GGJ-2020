@@ -46,15 +46,11 @@ public class CarController : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             float modifiedTurnPower = turnPower * curSpeed.magnitude;
-            //modifiedTurnPower = modifiedTurnPower > turnPower ? turnPower : modifiedTurnPower;
-            Debug.Log("turning: " + modifiedTurnPower + " :: " + curSpeed.magnitude);
-            transform.Rotate(Vector3.forward * modifiedTurnPower);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             float modifiedTurnPower = turnPower * curSpeed.magnitude;
-            //modifiedTurnPower = modifiedTurnPower > turnPower ? turnPower : modifiedTurnPower;
             transform.Rotate(Vector3.forward * -modifiedTurnPower);
         }
 
