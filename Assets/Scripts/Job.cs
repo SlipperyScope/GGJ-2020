@@ -32,13 +32,17 @@ public class Job : MonoBehaviour
 
     #region Events
 
-    /// <summary>
-    /// Called when a Job has been completed
-    /// </summary>
     public event EventHandler JobCompleted;
     private void OnJobCompleted(JobCompletedEventArgs e)
     {
         EventHandler Handler = JobCompleted;
+        Handler?.Invoke(this, e);
+    }
+
+    public event EventHandler JobsiteReached;
+    private void OnJobsiteReached(EventArgs e)
+    {
+        EventHandler Handler = JobsiteReached;
         Handler?.Invoke(this, e);
     }
 
@@ -64,16 +68,4 @@ public class Job : MonoBehaviour
             // Start "Minigame"
         }
     }
-}
-
-/// <summary>
-/// The tool that can be used and the score that tool will give
-/// </summary>
-[System.Serializable]
-public class ToolScorePair
-{
-    [SerializeField]
-    public enum Tools { Dick, Cock}
-    public Tools Tool;
-    public float Score;
 }
