@@ -5,7 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-public enum Tools { Dick, Cock }
+public enum Tools {
+    Cash,
+    Drugs,
+    Gun,
+    Ladder,
+    Molotov,
+    Pills,
+    Search,
+    Talk,
+    Wrench,
+    Yell,
+}
 
 [System.Serializable]
 public class ToolScorePair

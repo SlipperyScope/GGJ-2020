@@ -16,16 +16,30 @@ public class HUDController : MonoBehaviour
     private bool timerIsRunning = false;
     private Text timerText;
     private GameObject wayfinder;
+    private GameObject toolbox;
+    private GameObject toolboxbg;
+    private GameObject minimap;
+
+    private Rect minimapRect;
     void Start()
     {
         this.wayfinder = GameObject.Find("Wayfinder");
+
+        this.toolbox = GameObject.Find("Toolbox");
+        this.toolboxbg = GameObject.Find("ToolboxBg");
+        this.toolbox.SetActive(false);
+        this.toolboxbg.SetActive(false);
+
         this.timerText = GameObject.Find("Timer").GetComponent<Text>();
         this.timerText.text = "0:00";
         this.timerText.color = IdleColor;
+
+        this.minimap = GameObject.Find("MinimapMapMap");
+        this.minimapRect = minimap.GetComponent<RectTransform>().rect;
+
         StartCoroutine(TestTheTimers());
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (this.timerIsRunning) {
@@ -47,6 +61,7 @@ public class HUDController : MonoBehaviour
         this.StartTimer(Time.time);
         yield return new WaitForSeconds(6.3f);
         this.StopTimer();
+        this.ShowToolbox();
     }
 
     public void StartTimer(float time)
@@ -61,6 +76,28 @@ public class HUDController : MonoBehaviour
         float duration = Time.time - this.refTime;
         StartCoroutine(StopAnimation());
         return duration;
+    }
+
+    public void SetActiveTool(Tools tool) {
+        Debug.Log(tool);
+        this.HideToolbox();
+    }
+
+    public void ShowToolbox() {
+        this.toolbox.SetActive(true);
+        this.toolboxbg.SetActive(true);
+    }
+
+    public void HideToolbox() {
+        this.toolbox.SetActive(false);
+        this.toolboxbg.SetActive(false);
+    }
+
+    public void UpdatePosition(float xpos, float ypos) {
+        minimap.GetComponent<RectTransform>().anchoredPosition = new Vector2(
+            minimapRect.width * (1 - xpos) - minimapRect.width / 2,
+            minimapRect.height * (1 - ypos) - minimapRect.height / 2
+        );
     }
 
     IEnumerator StopAnimation()
