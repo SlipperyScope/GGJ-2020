@@ -17,11 +17,14 @@ public class HUDController : MonoBehaviour
     private Text timerText;
     private GameObject wayfinder;
     private GameObject toolbox;
+    private GameObject toolboxbg;
     void Start()
     {
         this.wayfinder = GameObject.Find("Wayfinder");
         this.toolbox = GameObject.Find("Toolbox");
+        this.toolboxbg = GameObject.Find("ToolboxBg");
         this.toolbox.SetActive(false);
+        this.toolboxbg.SetActive(false);
         this.timerText = GameObject.Find("Timer").GetComponent<Text>();
         this.timerText.text = "0:00";
         this.timerText.color = IdleColor;
@@ -74,10 +77,12 @@ public class HUDController : MonoBehaviour
 
     public void ShowToolbox() {
         this.toolbox.SetActive(true);
+        this.toolboxbg.SetActive(true);
     }
 
     public void HideToolbox() {
         this.toolbox.SetActive(false);
+        this.toolboxbg.SetActive(false);
     }
 
     IEnumerator StopAnimation()
