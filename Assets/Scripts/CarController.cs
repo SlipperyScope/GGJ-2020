@@ -40,7 +40,7 @@ public class CarController : MonoBehaviour
             }
 
             float inputForce = Input.GetAxis("Vertical");
-            if (inputForce < 0)
+            if (inputForce < 0 || Input.GetKey(KeyCode.Space))
             {
                 inputForce /= 2;
             }
@@ -48,13 +48,13 @@ public class CarController : MonoBehaviour
 
             if (Input.GetKey(KeyCode.A))
             {
-                float modifiedTurnPower = turnPower * curSpeed.magnitude;
+                float modifiedTurnPower = turnPower * curSpeed.magnitude * (inputForce < 0 ? -1 : 1);
                 transform.Rotate(Vector3.forward * modifiedTurnPower);
             }
 
             if (Input.GetKey(KeyCode.D))
             {
-                float modifiedTurnPower = turnPower * curSpeed.magnitude;
+                float modifiedTurnPower = turnPower * curSpeed.magnitude * (inputForce < 0 ? -1 : 1);
                 transform.Rotate(Vector3.forward * -modifiedTurnPower);
             }
 
