@@ -21,6 +21,13 @@ public class PlayerController : MonoBehaviour
     public GameObject truck;
     public GameObject person;
 
+    public Transform REALTransform
+    {
+        get => IsTruck ? truck.transform : person.transform;
+    }
+
+    private bool IsTruck = true;
+
     public event EventHandler<ModeChangedEventArgs> ModeChanged;
     private void OnModeChanged(ModeChangedEventArgs e)
     {
@@ -40,6 +47,7 @@ public class PlayerController : MonoBehaviour
 
     public void SwitchToOnFoot()
     {
+        IsTruck = false;
         truck.GetComponent<CarController>().ToggleOff();
         person.transform.position = new Vector2(truck.transform.position.x - 1, truck.transform.position.y);
         person.SetActive(true);
@@ -48,6 +56,7 @@ public class PlayerController : MonoBehaviour
 
     public void SwitchToInCar()
     {
+        IsTruck = true;
         person.SetActive(false);
         truck.GetComponent<CarController>().ToggleOn();
         OnModeChanged(new ModeChangedEventArgs(truck.transform, Mode.Truck));
