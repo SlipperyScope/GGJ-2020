@@ -94,10 +94,10 @@ public class HUDController : MonoBehaviour
     }
 
     public void UpdatePosition(float xpos, float ypos) {
-        //minimap.GetComponent<RectTransform>().anchoredPosition = new Vector2(
-        //    minimapRect.width * (1 - xpos) - minimapRect.width / 2,
-        //    minimapRect.height * (1 - ypos) - minimapRect.height / 2
-        //);
+        minimap.GetComponent<RectTransform>().anchoredPosition = new Vector2(
+            minimapRect.width * (1 - xpos) - minimapRect.width / 2,
+            minimapRect.height * (1 - ypos) - minimapRect.height / 2
+        );
     }
 
     IEnumerator StopAnimation()
