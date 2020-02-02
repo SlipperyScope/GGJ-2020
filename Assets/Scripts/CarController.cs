@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
-    public float power     = 8;
-    public float maxSpeed  = 50;
-    public float turnPower = 5;
-    public float friction  = 2;
+    public float power = 30;//8;
+    public float maxSpeed = 40;//50;
+    public float turnPower = 0.35f;//5;
+    public float friction = 3;//2;
 
     public Vector2 curSpeed;
     public Rigidbody2D carBody;
@@ -46,14 +46,12 @@ public class CarController : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             float modifiedTurnPower = turnPower * curSpeed.magnitude;
-            modifiedTurnPower = modifiedTurnPower > turnPower ? turnPower : modifiedTurnPower;
             transform.Rotate(Vector3.forward * modifiedTurnPower);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             float modifiedTurnPower = turnPower * curSpeed.magnitude;
-            modifiedTurnPower = modifiedTurnPower > turnPower ? turnPower : modifiedTurnPower;
             transform.Rotate(Vector3.forward * -modifiedTurnPower);
         }
 
