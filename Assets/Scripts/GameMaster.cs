@@ -18,7 +18,7 @@ public class GameMaster : MonoBehaviour
     public GameObject CurrentJob { get; private set; }
     private Job CurrentJobScript;
 
-    private PlayerController Controller;
+    public PlayerController Controller { get; private set; }
     public JobDispatcher Dispatcher { get; private set; }
 
     /// <summary>
@@ -46,10 +46,9 @@ public class GameMaster : MonoBehaviour
 
     private void JobDispatched(object sender, JobDispatchedEventArgs e)
     {
-        Debug.Log("Dispatched job: " + e.Job.name);
-
         CurrentJob = e.Job;
-        // Tell HUD the new destination
+        HUD.GetComponent<HUDController>().Destination = CurrentJob;
+
         CurrentJobScript = CurrentJob.GetComponent<Job>();
         CurrentJobScript.JobsiteReached += JobSiteReached;
         CurrentJobScript.JobCompleted += JobComplete;

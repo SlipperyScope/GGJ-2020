@@ -39,6 +39,10 @@ public class Job : MonoBehaviour
     public ToolScorePair[] Tools;
 
     private bool AtJobsite = false;
+    public bool JobFinished { get; private set; } = false;
+    public GameObject ClientSprite;
+
+    private GameMaster GM;
 
     #region Events
 
@@ -46,7 +50,6 @@ public class Job : MonoBehaviour
     private void OnJobCompleted(JobCompletedEventArgs e)
     {
         EventHandler Handler = JobCompleted;
-        Debug.Log("Job's finished!");
         Handler?.Invoke(this, e);
     }
 
@@ -65,6 +68,7 @@ public class Job : MonoBehaviour
     private void Awake()
     {
         Text.text = "";
+       GM = GameObject.Find("GameMaster").GetComponent<GameMaster>();
     }
 
     private void Update()
@@ -73,6 +77,8 @@ public class Job : MonoBehaviour
         {
             StopMiniGame();
         }
+
+        ClientSprite.transform.up = GM.Controller.REALTransform.position - ClientSprite.transform.position;
     }
 
     /// <summary>
@@ -81,7 +87,7 @@ public class Job : MonoBehaviour
     /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (AtJobsite == false && collision.gameObject.tag == "Player")
+        if (JobFinished == false && AtJobsite == false && collision.gameObject.tag == "Player")
         {
             StartMinigame();
         }
@@ -110,6 +116,7 @@ public class Job : MonoBehaviour
     private void StopMiniGame()
     {
         AtJobsite = false;
+        JobFinished = true;
         Text.text = DefaultResponse;
         OnJobCompleted(new JobCompletedEventArgs());
     }

@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 404955398}
   m_Layer: 0
   m_Name: GameMaster
-  m_TagString: Untagged
+  m_TagString: GameMaster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d631325d41db7844b9e1875592525f07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartDelay: 10
+  StartDelay: 0
   DispatchDelay: 5
 --- !u!66 &404955396
 CompositeCollider2D:
@@ -804,7 +804,7 @@ PrefabInstance:
     - target: {fileID: 4601575099608065660, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
         type: 3}
       propertyPath: m_Name
-      value: JobPrefab
+      value: TestJob
       objectReference: {fileID: 0}
     - target: {fileID: 6262201162107646230, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
         type: 3}
@@ -1160,7 +1160,12 @@ PrefabInstance:
     - target: {fileID: 4663426586005584314, guid: 9dc493aa70357cf5eb175913dcfcba9f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4663426586005584314, guid: 9dc493aa70357cf5eb175913dcfcba9f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dc493aa70357cf5eb175913dcfcba9f, type: 3}
