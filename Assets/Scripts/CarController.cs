@@ -46,6 +46,7 @@ public class CarController : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             float modifiedTurnPower = turnPower * curSpeed.magnitude;
+            transform.Rotate(Vector3.forward * modifiedTurnPower);
         }
 
         if (Input.GetKey(KeyCode.D))
