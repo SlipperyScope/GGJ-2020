@@ -40,21 +40,34 @@ public class CarController : MonoBehaviour
             }
 
             float inputForce = Input.GetAxis("Vertical");
-            if (inputForce < 0 || Input.GetKey(KeyCode.Space))
+            float reverseMod = 1;
+            if (inputForce < 0)
             {
                 inputForce /= 2;
+                reverseMod = -1;
+            }
+
+            bool braked = false;
+            if (Input.GetKey(KeyCode.Space))
+            {
+                braked = true;
+                if (inputForce > 0 && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
+                {
+                    inputForce /= 2;
+                }
             }
             carBody.AddForce(transform.up * power * inputForce);
 
             if (Input.GetKey(KeyCode.A))
             {
-                float modifiedTurnPower = turnPower * curSpeed.magnitude * (inputForce < 0 ? -1 : 1);
+                float modifiedTurnPower = turnPower * (braked ? 15 : curSpeed.magnitude) * reverseMod;
                 transform.Rotate(Vector3.forward * modifiedTurnPower);
             }
 
             if (Input.GetKey(KeyCode.D))
             {
-                float modifiedTurnPower = turnPower * curSpeed.magnitude * (inputForce < 0 ? -1 : 1);
+                float modifiedTurnPower = turnPower * (braked ? 15 : curSpeed.magnitude) * reverseMod;
+                Debug.Log("turning : " + modifiedTurnPower);
                 transform.Rotate(Vector3.forward * -modifiedTurnPower);
             }
 
