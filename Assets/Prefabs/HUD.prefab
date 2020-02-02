@@ -638,7 +638,7 @@ GameObject:
   - component: {fileID: 4663426587110677124}
   - component: {fileID: 4663426587110677125}
   m_Layer: 5
-  m_Name: Image
+  m_Name: MinimapMapMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -653,15 +653,15 @@ RectTransform:
   m_GameObject: {fileID: 4663426587110677127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.3127124, y: 3.3127124, z: 3.3127124}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4663426587124386634}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000012045, y: 0.0000060223}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4663426587110677124
 CanvasRenderer:
