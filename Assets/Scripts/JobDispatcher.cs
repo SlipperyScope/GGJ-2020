@@ -13,7 +13,7 @@ public class JobDispatcher : MonoBehaviour
     [Range(0f, 300f)]
     public float DispatchDelay = 5f;
 
-    //public Job CurrentJob { get; private set; }
+    public Job CurrentJob { get; private set; }
 
     private bool ReadyForDispatch = false;
     private Coroutine DelayCoroutineRef;
@@ -26,6 +26,8 @@ public class JobDispatcher : MonoBehaviour
         EventHandler handler = JobDispatched;
         handler?.Invoke(this, e);
     } 
+
+
 
     #endregion
 

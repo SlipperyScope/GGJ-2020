@@ -63,9 +63,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Prince Romerson (c.\u20091840 \u2013 1872) was a Native Hawaiian who fought
-    in the American Civil War at a time when the Kingdom of Hawaii was an independent
-    nation."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -134,13 +132,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2371816386218170339}
-    characterCount: 155
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 28
-    wordCount: 28
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 4
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -168,6 +166,7 @@ GameObject:
   - component: {fileID: 4601575098529503385}
   - component: {fileID: 2356258671157349980}
   - component: {fileID: 7161482343640592126}
+  - component: {fileID: 8252003861637483716}
   m_Layer: 12
   m_Name: Objective
   m_TagString: Untagged
@@ -228,8 +227,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.2784314, g: 0.7176471, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 8c75f530b558dae4b95b216077cca38b, type: 3}
+  m_Color: {r: 1, g: 0.92450494, b: 0.19339621, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -255,6 +254,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!58 &8252003861637483716
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4601575098529503384}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.25
 --- !u!1 &4601575099608065660
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,7 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4601575099608065539}
   - component: {fileID: 4601575099608065538}
-  - component: {fileID: 4601575099608065661}
+  - component: {fileID: 9185035406885142185}
   m_Layer: 11
   m_Name: JobPrefab
   m_TagString: Untagged
@@ -303,10 +318,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Objective: {fileID: 4601575098529503384}
   Client: {fileID: 4601575100100721125}
-  blurb: All work and no play makes A'dumb a'dumboy
+  Text: {fileID: 0}
+  blurb: All work and no play makes Adam a dumb boy
   Tools: []
---- !u!58 &4601575099608065661
-CircleCollider2D:
+--- !u!60 &9185035406885142185
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -319,8 +335,22 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 3
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: -0.95105654, y: 0.30901697}
+      - {x: -0.5877852, y: -0.80901706}
+      - {x: 0.58778536, y: -0.80901694}
+      - {x: 0.9510565, y: 0.30901712}
 --- !u!1 &4601575100100721125
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4601575100100721125}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: -1, z: 0}
+  m_LocalPosition: {x: 1.015, y: -0.733, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3717421222080460761}
@@ -393,8 +423,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 0.3254902, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 832fdaf0477140c4db1dd0c36921477f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -456,7 +486,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.12, y: 0.343}
+  m_AnchoredPosition: {x: 1.146, y: 0.591}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6262201162107646230
