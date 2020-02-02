@@ -32,6 +32,9 @@ public class Job : MonoBehaviour
     [Tooltip("Job text")]
     public string blurb = "My name is A'dumb!";
 
+    [Tooltip("Default response")]
+    public string DefaultResponse = "That's not very helpful";
+
     [Tooltip("Scoring tools for the job and their score\nUnspecified tool will default to a score of 0")]
     public ToolScorePair[] Tools;
 
