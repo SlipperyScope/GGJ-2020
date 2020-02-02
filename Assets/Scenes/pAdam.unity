@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &230021119 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5723500337094486221, guid: 1aba245a3ebf14d42acc4e283f211c8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1398300613}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &443581840
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,8 +223,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8812a98f568637442a2eac5f2b0cc481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carLocation: {fileID: 2104274465}
-  distanceFromCar: 10
+  Player: {fileID: 230021119}
+  InCarSize: 10
+  OnFootSize: 5
+  CameraZoomTime: 0.5
 --- !u!1 &999693928
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,9 +306,9 @@ Transform:
   m_LocalScale: {x: 5.9387, y: 5.9387, z: 5.9387}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2104274464
+--- !u!1001 &1398300613
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -310,17 +318,17 @@ PrefabInstance:
     - target: {fileID: 2880733949069200258, guid: 1aba245a3ebf14d42acc4e283f211c8c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.05073
+      value: -0.048306346
       objectReference: {fileID: 0}
     - target: {fileID: 2880733949069200258, guid: 1aba245a3ebf14d42acc4e283f211c8c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.952549
+      value: 1.0424359
       objectReference: {fileID: 0}
     - target: {fileID: 2880733949069200258, guid: 1aba245a3ebf14d42acc4e283f211c8c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -426.00037
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2880733949069200258, guid: 1aba245a3ebf14d42acc4e283f211c8c,
         type: 3}
@@ -345,7 +353,7 @@ PrefabInstance:
     - target: {fileID: 2880733949069200258, guid: 1aba245a3ebf14d42acc4e283f211c8c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2880733949069200258, guid: 1aba245a3ebf14d42acc4e283f211c8c,
         type: 3}
@@ -367,16 +375,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerPrefab
       objectReference: {fileID: 0}
-    - target: {fileID: 6909871865319172401, guid: 1aba245a3ebf14d42acc4e283f211c8c,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1aba245a3ebf14d42acc4e283f211c8c, type: 3}
---- !u!4 &2104274465 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6909871865319172406, guid: 1aba245a3ebf14d42acc4e283f211c8c,
-    type: 3}
-  m_PrefabInstance: {fileID: 2104274464}
-  m_PrefabAsset: {fileID: 0}
