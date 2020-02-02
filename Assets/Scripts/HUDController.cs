@@ -35,14 +35,14 @@ public class HUDController : MonoBehaviour
         this.StopTimer();
     }
 
-    void StartTimer(float time)
+    public void StartTimer(float time)
     {
         this.refTime = time;
         this.timerIsRunning = true;
         this.timerText.color = RunningColor;
     }
 
-    float StopTimer() {
+    public float StopTimer() {
         this.timerIsRunning = false;
         float duration = Time.time - this.refTime;
         StartCoroutine(StopAnimation());
