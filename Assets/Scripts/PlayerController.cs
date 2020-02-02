@@ -36,16 +36,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            if (person.activeSelf)
-            {
-                SwitchToInCar();
-            } else
-            {
-                SwitchToOnFoot();
-            }
-        }
     }
 
     public void SwitchToOnFoot()
@@ -61,5 +51,10 @@ public class PlayerController : MonoBehaviour
         person.SetActive(false);
         truck.GetComponent<CarController>().ToggleOn();
         OnModeChanged(new ModeChangedEventArgs(truck.transform, Mode.Truck));
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
     }
 }

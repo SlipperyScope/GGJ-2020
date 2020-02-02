@@ -54,7 +54,6 @@ public class Job : MonoBehaviour
     private void OnJobsiteReached(EventArgs e)
     {
         EventHandler Handler = JobsiteReached;
-        Debug.Log("Job reached");
         Handler?.Invoke(this, e);
     }
 
@@ -68,13 +67,20 @@ public class Job : MonoBehaviour
         Text.text = "";
     }
 
+    private void Update()
+    {
+        if (AtJobsite == true && Input.GetKeyDown(KeyCode.Q))
+        {
+            StopMiniGame();
+        }
+    }
+
     /// <summary>
     /// On Trigger Enter
     /// </summary>
     /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger: " + collision.gameObject.name);
         if (AtJobsite == false && collision.gameObject.tag == "Player")
         {
             StartMinigame();
@@ -99,5 +105,12 @@ public class Job : MonoBehaviour
         OnJobsiteReached(new EventArgs());
 
         Text.text = blurb;
+    }
+
+    private void StopMiniGame()
+    {
+        AtJobsite = false;
+        Text.text = DefaultResponse;
+        OnJobCompleted(new JobCompletedEventArgs());
     }
 }

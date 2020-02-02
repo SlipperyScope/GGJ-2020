@@ -13,17 +13,17 @@ public class JobDispatcher : MonoBehaviour
     [Range(0f, 300f)]
     public float DispatchDelay = 5f;
 
-    public Job CurrentJob { get; private set; }
+    public GameObject CurrentJob { get; private set; }
 
     private bool ReadyForDispatch = false;
     private Coroutine DelayCoroutineRef;
 
     #region Events
 
-    public event EventHandler JobDispatched;
+    public event EventHandler<JobDispatchedEventArgs> JobDispatched;
     private void OnJobDispatched(JobDispatchedEventArgs e)
     {
-        EventHandler handler = JobDispatched;
+        EventHandler<JobDispatchedEventArgs> handler = JobDispatched;
         handler?.Invoke(this, e);
     } 
 
@@ -55,8 +55,10 @@ public class JobDispatcher : MonoBehaviour
     /// </summary>
     private void DispatchJob()
     {
-        //var Job = new Job(Time.time);
-        OnJobDispatched(new JobDispatchedEventArgs());
+        ReadyForDispatch = false;
+
+        // Make new job
+        OnJobDispatched(new JobDispatchedEventArgs(GameObject.Find("TestJob")));
     }
 
     /// <summary>
