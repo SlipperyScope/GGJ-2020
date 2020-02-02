@@ -5,10 +5,9 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    //public Transform carLocation;
-
+    [Tooltip("Player prefab")]
     public GameObject Player;
-    [SerializeField]
+
 
     [Tooltip("Height of camera in the car")]
     public float InCarSize = 10f;
@@ -19,6 +18,7 @@ public class CameraFollow : MonoBehaviour
     [Tooltip("Time it takes the camera to zoon in seconds")]
     public float CameraZoomTime = 0.5f;
 
+    private Transform ToFollow;
     private float TargetSize;
     private float DampVelocity;
 
@@ -35,6 +35,27 @@ public class CameraFollow : MonoBehaviour
         //TODO: Make these events happen
         //Player.InCar += UseCarCam;
         //Player.OnFoot += UseFootCam;
+        var Controller = Player.GetComponent<PlayerController>();
+        if (Controller != null)
+        {
+            Controller.ModeChanged += ModeChanged;
+        }
+    }
+
+    private void ModeChanged(object sender, ModeChangedEventArgs e)
+    {
+        ToFollow = e.Follow;
+        switch (e.Mode)
+        {
+            case Mode.Truck:
+                TargetSize = InCarSize;
+                break;
+            case Mode.Person:
+                TargetSize = OnFootSize;
+                break;
+            default:
+                break;
+        }
     }
 
     void Start()
@@ -54,18 +75,11 @@ public class CameraFollow : MonoBehaviour
 
     void Update()
     {
-
-        var CameraPosition = Player.transform.position;
+        var CameraPosition = ToFollow.position;
         CameraPosition.z = transform.position.z;
         transform.position = CameraPosition;
 
         var CamSize = Camera.orthographicSize;
         Camera.orthographicSize = Mathf.SmoothDamp(CamSize, TargetSize, ref DampVelocity, CameraZoomTime);
-
-
-        //CamZ = Mathf.SmoothDamp(CamZ, TargetZ, ref DampVelocity, CameraZoomTime);
-        //var CameraPosition = Player.transform.position;
-        //CameraPosition.z += CamZ;
-        //transform.position = CameraPosition;
     }
 }
