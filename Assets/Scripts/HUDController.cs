@@ -9,11 +9,16 @@ public class HUDController : MonoBehaviour
     public Color IdleColor;
     public Color RunningColor;
 
+    public GameObject Player;
+    public GameObject Destination;
+
     private float refTime = 0;
     private bool timerIsRunning = false;
     private Text timerText;
+    private GameObject wayfinder;
     void Start()
     {
+        this.wayfinder = GameObject.Find("Wayfinder");
         this.timerText = GameObject.Find("Timer").GetComponent<Text>();
         this.timerText.text = "0:00";
         this.timerText.color = IdleColor;
@@ -25,6 +30,15 @@ public class HUDController : MonoBehaviour
     {
         if (this.timerIsRunning) {
             this.timerText.text = this.FormattedTime();
+        }
+
+        if (this.Destination != null) {
+            this.wayfinder.SetActive(true);
+            var vec = this.Destination.transform.InverseTransformDirection(this.Destination.transform.position - this.Player.transform.position);
+            var ang = Mathf.Atan2(vec.y, vec.x) * Mathf.Rad2Deg;
+            this.wayfinder.GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, ang);
+        } else {
+            this.wayfinder.SetActive(false);
         }
     }
 
