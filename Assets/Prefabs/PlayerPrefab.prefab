@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1768817849722811896}
   - component: {fileID: 1768817849722811898}
   - component: {fileID: 1768817849722811893}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Person
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2880733949069200258}
   - component: {fileID: 1935408328}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: PlayerPrefab
   m_TagString: Player
   m_Icon: {fileID: 0}
