@@ -49,23 +49,15 @@ public class Job : MonoBehaviour
     #endregion
 
     /// <summary>
-    /// Constructor
-    /// </summary>
-    /// <param name="Time"></param>
-    public Job(float Time)
-    {
-        StartTime = Time;
-    }
-
-    /// <summary>
     /// On Trigger Enter
     /// </summary>
     /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (gameObject.tag == "Player")
+        Debug.Log("Trigger: " + collision.gameObject.name);
+        if (collision.gameObject.tag == "Player")
         {
-            // Start "Minigame"
+            OnJobsiteReached(new EventArgs());
         }
     }
 }

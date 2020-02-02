@@ -9,10 +9,10 @@ public class JobDispatchedEventArgs : EventArgs
     /// <summary>
     /// Mission that was dispatched
     /// </summary>
-    public readonly Job Job;
+    //public readonly Job Job;
 
-    public JobDispatchedEventArgs(Job Job)
+    public JobDispatchedEventArgs(/*Job Job*/)
     {
-        this.Job = Job;
+       // this.Job = Job;
     }
 }

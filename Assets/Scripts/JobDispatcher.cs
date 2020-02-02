@@ -13,7 +13,7 @@ public class JobDispatcher : MonoBehaviour
     [Range(0f, 300f)]
     public float DispatchDelay = 5f;
 
-    public Job CurrentJob { get; private set; }
+    //public Job CurrentJob { get; private set; }
 
     private bool ReadyForDispatch = false;
     private Coroutine DelayCoroutineRef;
@@ -53,8 +53,8 @@ public class JobDispatcher : MonoBehaviour
     /// </summary>
     private void DispatchJob()
     {
-        var Job = new Job(Time.time);
-        OnJobDispatched(new JobDispatchedEventArgs(Job));
+        //var Job = new Job(Time.time);
+        OnJobDispatched(new JobDispatchedEventArgs());
     }
 
     /// <summary>
