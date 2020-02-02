@@ -16,9 +16,12 @@ public class HUDController : MonoBehaviour
     private bool timerIsRunning = false;
     private Text timerText;
     private GameObject wayfinder;
+    private GameObject toolbox;
     void Start()
     {
         this.wayfinder = GameObject.Find("Wayfinder");
+        this.toolbox = GameObject.Find("Toolbox");
+        this.toolbox.SetActive(false);
         this.timerText = GameObject.Find("Timer").GetComponent<Text>();
         this.timerText.text = "0:00";
         this.timerText.color = IdleColor;
@@ -47,6 +50,7 @@ public class HUDController : MonoBehaviour
         this.StartTimer(Time.time);
         yield return new WaitForSeconds(6.3f);
         this.StopTimer();
+        this.ShowToolbox();
     }
 
     public void StartTimer(float time)
@@ -61,6 +65,19 @@ public class HUDController : MonoBehaviour
         float duration = Time.time - this.refTime;
         StartCoroutine(StopAnimation());
         return duration;
+    }
+
+    public void SetActiveTool(Tools tool) {
+        Debug.Log(tool);
+        this.HideToolbox();
+    }
+
+    public void ShowToolbox() {
+        this.toolbox.SetActive(true);
+    }
+
+    public void HideToolbox() {
+        this.toolbox.SetActive(false);
     }
 
     IEnumerator StopAnimation()
