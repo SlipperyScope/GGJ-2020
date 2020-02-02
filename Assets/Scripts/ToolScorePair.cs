@@ -13,4 +13,5 @@ public class ToolScorePair
     [SerializeField]
     public Tools Tool;
     public float Score;
+    public string Blurb;
 }
