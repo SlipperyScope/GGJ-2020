@@ -67,7 +67,6 @@ public class CarController : MonoBehaviour
             if (Input.GetKey(KeyCode.D))
             {
                 float modifiedTurnPower = turnPower * (braked ? 15 : curSpeed.magnitude) * reverseMod;
-                Debug.Log("turning : " + modifiedTurnPower);
                 transform.Rotate(Vector3.forward * -modifiedTurnPower);
             }
 

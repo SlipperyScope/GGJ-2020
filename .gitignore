@@ -52,3 +52,7 @@ crashlytics-build.properties
 [Aa]ssets/Plugins.meta
 
 .idea
+
+# Audio
+*.aup
+[Ss]ound/theme-song_data
