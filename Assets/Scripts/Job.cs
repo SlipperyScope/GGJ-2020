@@ -124,7 +124,7 @@ public class Job : MonoBehaviour
 
     private IEnumerator DelayCompleteMinigame()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
         OnJobCompleted(new JobCompletedEventArgs());
     }
 
