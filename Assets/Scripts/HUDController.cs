@@ -19,6 +19,7 @@ public class HUDController : MonoBehaviour
     private GameObject toolbox;
     private GameObject toolboxbg;
     private GameObject minimap;
+    private GameMaster GM;
 
     private Rect minimapRect;
     void Start()
@@ -36,7 +37,10 @@ public class HUDController : MonoBehaviour
         this.minimap = GameObject.Find("MinimapMapMap");
         this.minimapRect = minimap.GetComponent<RectTransform>().rect;
 
-        StartCoroutine(TestTheTimers());
+        GM = GameObject.Find("GameMaster").GetComponent<GameMaster>();
+
+        //StartCoroutine(TestTheTimers());
+
     }
 
     void Update()

@@ -52,6 +52,8 @@ public class GameMaster : MonoBehaviour
         CurrentJobScript = CurrentJob.GetComponent<Job>();
         CurrentJobScript.JobsiteReached += JobSiteReached;
         CurrentJobScript.JobCompleted += JobComplete;
+
+        HUD.GetComponent<HUDController>().StartTimer(Time.time);
     }
 
     private void JobComplete(object sender, EventArgs e)
@@ -62,5 +64,11 @@ public class GameMaster : MonoBehaviour
     private void JobSiteReached(object sender, EventArgs e)
     {
         Controller.SwitchToOnFoot();
+        var controller = HUD.GetComponent<HUDController>();
+        controller.StopTimer();
+        controller.ShowToolbox();
+        
     }
+
+    
 }
