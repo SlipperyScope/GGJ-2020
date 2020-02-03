@@ -36,7 +36,7 @@ public class HUDController : MonoBehaviour
         this.minimap = GameObject.Find("MinimapMapMap");
         this.minimapRect = minimap.GetComponent<RectTransform>().rect;
 
-        StartCoroutine(TestTheTimers());
+        //StartCoroutine(TestTheTimers());
     }
 
     void Update()
