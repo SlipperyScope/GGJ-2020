@@ -134,7 +134,7 @@ public class Job : MonoBehaviour
         string Response = DefaultResponse;
         foreach(var t in Tools)
         {
-            if (t.Tool == Tool)
+            if (t.Tool == Tool && t.Blurb != "")
             {
                 Response = t.Blurb;
                 break;
