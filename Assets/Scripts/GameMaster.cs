@@ -16,7 +16,7 @@ public class GameMaster : MonoBehaviour
     public GameObject HUD;
     public GameObject Map;
     public GameObject CurrentJob { get; private set; }
-    private Job CurrentJobScript;
+    public Job CurrentJobScript { get; private set; }
 
     public PlayerController Controller { get; private set; }
     public JobDispatcher Dispatcher { get; private set; }

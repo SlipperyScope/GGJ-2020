@@ -74,10 +74,10 @@ public class Job : MonoBehaviour
 
     private void Update()
     {
-        if (AtJobsite == true && Input.GetKeyDown(KeyCode.Q))
-        {
-            StopMiniGame();
-        }
+        //if (AtJobsite == true && Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    StopMiniGame();
+        //}
 
         ClientSprite.transform.up = GM.Controller.REALTransform.position - ClientSprite.transform.position;
     }
@@ -114,11 +114,11 @@ public class Job : MonoBehaviour
         Text.text = blurb;
     }
 
-    private void StopMiniGame()
+    private void StopMiniGame(string Response)
     {
         AtJobsite = false;
         JobFinished = true;
-        Text.text = DefaultResponse;
+        Text.text = Response;
         StartCoroutine(DelayCompleteMinigame());
     }
 
@@ -126,5 +126,20 @@ public class Job : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         OnJobCompleted(new JobCompletedEventArgs());
+    }
+
+    public void SetTool(Tools Tool)
+    {
+        Debug.Log("Tool: " + Tool);
+        string Response = DefaultResponse;
+        foreach(var t in Tools)
+        {
+            if (t.Tool == Tool)
+            {
+                Response = t.Blurb;
+                break;
+            }
+        }
+        StopMiniGame(Response);
     }
 }

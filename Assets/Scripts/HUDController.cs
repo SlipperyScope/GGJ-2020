@@ -79,6 +79,7 @@ public class HUDController : MonoBehaviour
 
     public void SetActiveTool(Tools tool) {
         Debug.Log(tool);
+        GameObject.Find("GameMaster").GetComponent<GameMaster>().CurrentJobScript.SetTool(tool);
         this.HideToolbox();
     }
 
