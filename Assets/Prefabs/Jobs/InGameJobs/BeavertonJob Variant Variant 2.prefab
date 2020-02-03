@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1216353697140422100
+--- !u!1001 &8794096846192589508
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 5469632739961189268, guid: 3c27fc99b6b969047a91bd31cda1266b,
         type: 3}
       propertyPath: m_Name
-      value: BeavertonJob Variant Variant
+      value: BeavertonJob Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
         type: 3}
@@ -20,13 +20,23 @@ PrefabInstance:
     - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
         type: 3}
       propertyPath: blurb
-      value: "My neighbor complimented me on my pashmina and I don\u2019t know how
-        to tell them that it was actually an irish walking cape. "
+      value: "There is only one ISP in my neighborhood and they don\u2019t offer
+        symmetric gigabit"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
+        type: 3}
+      propertyPath: Tools.Array.data[0].Blurb
+      value: It's going to take a little bit more for them to run a line to my house
       objectReference: {fileID: 0}
     - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
         type: 3}
       propertyPath: Tools.Array.data[1].Tool
-      value: 4
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
+        type: 3}
+      propertyPath: Tools.Array.data[1].Blurb
+      value: On my way down to headquarters now
       objectReference: {fileID: 0}
     - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
         type: 3}
@@ -35,28 +45,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
         type: 3}
-      propertyPath: Tools.Array.data[3].Tool
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
-        type: 3}
-      propertyPath: Tools.Array.data[0].Blurb
-      value: Ummm.......It was $749 actually
-      objectReference: {fileID: 0}
-    - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
-        type: 3}
-      propertyPath: Tools.Array.data[1].Blurb
-      value: Wait, it isn't fireproof.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
-        type: 3}
       propertyPath: Tools.Array.data[2].Blurb
-      value: I don't think they're ever going to get it.
+      value: Yeah, I guess I only really need one choice
+      objectReference: {fileID: 0}
+    - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
+        type: 3}
+      propertyPath: Tools.Array.data[3].Tool
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
         type: 3}
       propertyPath: Tools.Array.data[3].Blurb
-      value: I KNOW, RIIIIGHHHT?
+      value: I don't need internet now
       objectReference: {fileID: 0}
     - target: {fileID: 5469632739961189355, guid: 3c27fc99b6b969047a91bd31cda1266b,
         type: 3}

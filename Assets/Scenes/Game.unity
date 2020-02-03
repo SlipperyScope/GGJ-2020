@@ -281,29 +281,71 @@ PrefabInstance:
     - target: {fileID: 1137857744792611770, guid: 3728d29233d62d54e99b85fab4ee3a25,
         type: 3}
       propertyPath: Steves.Array.size
-      value: 4
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1137857744792611770, guid: 3728d29233d62d54e99b85fab4ee3a25,
         type: 3}
       propertyPath: Steves.Array.data[0]
       value: 
-      objectReference: {fileID: 6559865322507208256, guid: 78b8ecdafd0fd3c46881b15f591cc8fb,
+      objectReference: {fileID: 6469906264373409318, guid: 81f7d9d95542df04c92e142e2c019bae,
         type: 3}
     - target: {fileID: 1137857744792611770, guid: 3728d29233d62d54e99b85fab4ee3a25,
         type: 3}
       propertyPath: Steves.Array.data[1]
       value: 
-      objectReference: {fileID: 2644668558497651874, guid: eafa70261622dfb468e48b45d8345a5c,
+      objectReference: {fileID: 3594683402810984784, guid: 532b98fff2785314592fa714f84e00e5,
         type: 3}
     - target: {fileID: 1137857744792611770, guid: 3728d29233d62d54e99b85fab4ee3a25,
         type: 3}
       propertyPath: Steves.Array.data[2]
       value: 
-      objectReference: {fileID: 3926087014319855515, guid: ab9a7e99c8ef1b34295a62f170d1b8c8,
+      objectReference: {fileID: 6559865322507208256, guid: 78b8ecdafd0fd3c46881b15f591cc8fb,
         type: 3}
     - target: {fileID: 1137857744792611770, guid: 3728d29233d62d54e99b85fab4ee3a25,
         type: 3}
       propertyPath: Steves.Array.data[3]
+      value: 
+      objectReference: {fileID: 6582395004408362078, guid: f9e4cc7daaca2704e88120752ddb440a,
+        type: 3}
+    - target: {fileID: 1137857744792611770, guid: 3728d29233d62d54e99b85fab4ee3a25,
+        type: 3}
+      propertyPath: Steves.Array.data[4]
+      value: 
+      objectReference: {fileID: 2644668558497651874, guid: eafa70261622dfb468e48b45d8345a5c,
+        type: 3}
+    - target: {fileID: 1137857744792611770, guid: 3728d29233d62d54e99b85fab4ee3a25,
+        type: 3}
+      propertyPath: Steves.Array.data[5]
+      value: 
+      objectReference: {fileID: 5545694627717735821, guid: 9d482bcccc2838b46997f774f6f9dd12,
+        type: 3}
+    - target: {fileID: 1137857744792611770, guid: 3728d29233d62d54e99b85fab4ee3a25,
+        type: 3}
+      propertyPath: Steves.Array.data[6]
+      value: 
+      objectReference: {fileID: 3960313964529075989, guid: e9ac01611deb18743b38718303364b3c,
+        type: 3}
+    - target: {fileID: 1137857744792611770, guid: 3728d29233d62d54e99b85fab4ee3a25,
+        type: 3}
+      propertyPath: Steves.Array.data[7]
+      value: 
+      objectReference: {fileID: 3675849603522354576, guid: 7afae9b6609d01e47bab10bd7ab85f2a,
+        type: 3}
+    - target: {fileID: 1137857744792611770, guid: 3728d29233d62d54e99b85fab4ee3a25,
+        type: 3}
+      propertyPath: Steves.Array.data[8]
+      value: 
+      objectReference: {fileID: 3926087014319855515, guid: ab9a7e99c8ef1b34295a62f170d1b8c8,
+        type: 3}
+    - target: {fileID: 1137857744792611770, guid: 3728d29233d62d54e99b85fab4ee3a25,
+        type: 3}
+      propertyPath: Steves.Array.data[9]
+      value: 
+      objectReference: {fileID: 3336735086263330001, guid: 24a9f6ab43e0b4f4bb4e222cca26a061,
+        type: 3}
+    - target: {fileID: 1137857744792611770, guid: 3728d29233d62d54e99b85fab4ee3a25,
+        type: 3}
+      propertyPath: Steves.Array.data[10]
       value: 
       objectReference: {fileID: 2796693122901295414, guid: 11d7e4a8af2b3654cb1d1440a97711d3,
         type: 3}

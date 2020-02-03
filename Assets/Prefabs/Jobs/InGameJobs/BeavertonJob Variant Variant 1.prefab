@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1216353697140422100
+--- !u!1001 &1306519467478910386
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,53 +10,43 @@ PrefabInstance:
     - target: {fileID: 5469632739961189268, guid: 3c27fc99b6b969047a91bd31cda1266b,
         type: 3}
       propertyPath: m_Name
-      value: BeavertonJob Variant Variant
+      value: BeavertonJob Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
         type: 3}
       propertyPath: Tools.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
         type: 3}
       propertyPath: blurb
-      value: "My neighbor complimented me on my pashmina and I don\u2019t know how
-        to tell them that it was actually an irish walking cape. "
-      objectReference: {fileID: 0}
-    - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
-        type: 3}
-      propertyPath: Tools.Array.data[1].Tool
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
-        type: 3}
-      propertyPath: Tools.Array.data[2].Tool
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
-        type: 3}
-      propertyPath: Tools.Array.data[3].Tool
-      value: 9
+      value: "My bicycle has a flat and I don\u2019t want to face the social stigma
+        that comes with participating in a micro-mobility service."
       objectReference: {fileID: 0}
     - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
         type: 3}
       propertyPath: Tools.Array.data[0].Blurb
-      value: Ummm.......It was $749 actually
+      value: Alright, Lyft is on it's way
+      objectReference: {fileID: 0}
+    - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
+        type: 3}
+      propertyPath: Tools.Array.data[1].Tool
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
         type: 3}
       propertyPath: Tools.Array.data[1].Blurb
-      value: Wait, it isn't fireproof.
+      value: I feel more confident already
+      objectReference: {fileID: 0}
+    - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
+        type: 3}
+      propertyPath: Tools.Array.data[2].Tool
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
         type: 3}
       propertyPath: Tools.Array.data[2].Blurb
-      value: I don't think they're ever going to get it.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5469632739961189354, guid: 3c27fc99b6b969047a91bd31cda1266b,
-        type: 3}
-      propertyPath: Tools.Array.data[3].Blurb
-      value: I KNOW, RIIIIGHHHT?
+      value: But I need metric!
       objectReference: {fileID: 0}
     - target: {fileID: 5469632739961189355, guid: 3c27fc99b6b969047a91bd31cda1266b,
         type: 3}
