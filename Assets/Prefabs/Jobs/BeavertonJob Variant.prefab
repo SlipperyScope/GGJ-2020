@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8373350399906698728
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4601575099608065538, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: blurb
+      value: Where are all the beavers?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601575099608065539, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -95.97645
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601575099608065539, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 21.718721
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601575099608065539, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601575099608065539, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601575099608065539, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601575099608065539, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601575099608065539, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601575099608065539, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601575099608065539, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601575099608065539, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601575099608065539, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601575099608065660, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_Name
+      value: BeavertonJob
+      objectReference: {fileID: 0}
+    - target: {fileID: 9185035406885142185, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9185035406885142185, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
+      value: 11.4993305
+      objectReference: {fileID: 0}
+    - target: {fileID: 9185035406885142185, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
+      value: -4.4693146
+      objectReference: {fileID: 0}
+    - target: {fileID: 9185035406885142185, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
+      value: -7.6201706
+      objectReference: {fileID: 0}
+    - target: {fileID: 9185035406885142185, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
+      value: 10.668211
+      objectReference: {fileID: 0}
+    - target: {fileID: 9185035406885142185, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
+      value: -7.6195526
+      objectReference: {fileID: 0}
+    - target: {fileID: 9185035406885142185, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
+      value: -4.727825
+      objectReference: {fileID: 0}
+    - target: {fileID: 9185035406885142185, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
+      value: -5.0570984
+      objectReference: {fileID: 0}
+    - target: {fileID: 9185035406885142185, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
+      value: -7.2292175
+      objectReference: {fileID: 0}
+    - target: {fileID: 9185035406885142185, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].x
+      value: 22.224922
+      objectReference: {fileID: 0}
+    - target: {fileID: 9185035406885142185, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].y
+      value: -7.1228046
+      objectReference: {fileID: 0}
+    - target: {fileID: 9185035406885142185, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].x
+      value: 22.339897
+      objectReference: {fileID: 0}
+    - target: {fileID: 9185035406885142185, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].y
+      value: -4.0538807
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9a7f7ebc4fdd3314ca49ea24ed96be18, type: 3}

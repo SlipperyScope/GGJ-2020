@@ -23,8 +23,7 @@ public class HUDController : MonoBehaviour
     private Rect minimapRect;
     void Start()
     {
-        this.wayfinder = GameObject.Find("Wayfinder");
-
+        this.wayfinder = transform.Find("Wayfinder").gameObject;
         this.toolbox = GameObject.Find("Toolbox");
         this.toolboxbg = GameObject.Find("ToolboxBg");
         this.toolbox.SetActive(false);
@@ -48,7 +47,7 @@ public class HUDController : MonoBehaviour
 
         if (this.Destination != null) {
             this.wayfinder.SetActive(true);
-            var vec = this.Destination.transform.InverseTransformDirection(this.Destination.transform.position - this.Player.transform.position);
+            var vec = this.Destination.transform.InverseTransformDirection(this.Destination.transform.position - this.Player.GetComponent<PlayerController>().REALTransform.position);
             var ang = Mathf.Atan2(vec.y, vec.x) * Mathf.Rad2Deg;
             this.wayfinder.GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, ang);
         } else {

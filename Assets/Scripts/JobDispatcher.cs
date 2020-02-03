@@ -1,17 +1,23 @@
 ﻿using System;
 using System.Collections;
+using System.Linq;
 using UnityEngine;
+
+public enum Location { Downtown, Beaverton, Lents, Ladd}
 
 public class JobDispatcher : MonoBehaviour
 {
     [Header("Config")]
     [Tooltip("Time until first mission is dispatched")]
-    [Range(0f, 300f)]
+    [Range(0f, 60f)]
     public float StartDelay = 10f;
 
     [Tooltip("Time until next mission is dispatched after mission complete")]
-    [Range(0f, 300f)]
+    [Range(0f, 60f)]
     public float DispatchDelay = 5f;
+
+    public GameObject[] Steves;
+    
 
     public GameObject CurrentJob { get; private set; }
 
@@ -26,8 +32,6 @@ public class JobDispatcher : MonoBehaviour
         EventHandler<JobDispatchedEventArgs> handler = JobDispatched;
         handler?.Invoke(this, e);
     } 
-
-
 
     #endregion
 
@@ -57,8 +61,22 @@ public class JobDispatcher : MonoBehaviour
     {
         ReadyForDispatch = false;
 
-        // Make new job
-        OnJobDispatched(new JobDispatchedEventArgs(GameObject.Find("TestJob")));
+        var NewJob = Instantiate(GetRandomJob());
+        CurrentJob = NewJob;
+        CurrentJob.GetComponent<Job>().JobCompleted += KillCompletedJob;
+        OnJobDispatched(new JobDispatchedEventArgs(NewJob));
+    }
+
+    private void KillCompletedJob(object sender, EventArgs e)
+    {
+        Destroy(CurrentJob);
+        StartCoroutine(WaitThenNextLevel());
+    }
+
+    private IEnumerator WaitThenNextLevel()
+    {
+        yield return new WaitForSeconds(DispatchDelay);
+        DispatchJob();
     }
 
     /// <summary>
@@ -70,5 +88,11 @@ public class JobDispatcher : MonoBehaviour
     {
         yield return new WaitForSeconds(Seconds);
         ReadyForDispatch = true;
+    }
+
+    private GameObject GetRandomJob()
+    {
+        int index = UnityEngine.Random.Range(0, Steves.Length);
+        return Steves[index];
     }
 }
