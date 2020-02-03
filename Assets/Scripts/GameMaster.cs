@@ -47,7 +47,7 @@ public class GameMaster : MonoBehaviour
     private void JobDispatched(object sender, JobDispatchedEventArgs e)
     {
         CurrentJob = e.Job;
-        HUD.GetComponent<HUDController>().Destination = CurrentJob;
+        HUD.GetComponent<HUDController>().Destination = CurrentJob.GetComponent<Job>().Client;
 
         CurrentJobScript = CurrentJob.GetComponent<Job>();
         CurrentJobScript.JobsiteReached += JobSiteReached;

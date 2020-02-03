@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class Job : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class Job : MonoBehaviour
     /// <summary>
     /// Location of the Job
     /// </summary>
-    public Vector2 Jobsite { get; }
+    public Transform Jobsite { get; }
 
     [Header("Config")]
     [Tooltip("This thing you need to interact with to finisht the job")]
@@ -101,7 +102,7 @@ public class Job : MonoBehaviour
     {
         Debug.Log("Collision: " + collision.gameObject.name);
     }
-
+    
     /// <summary>
     /// Start Minigame
     /// </summary>
@@ -118,6 +119,12 @@ public class Job : MonoBehaviour
         AtJobsite = false;
         JobFinished = true;
         Text.text = DefaultResponse;
+        StartCoroutine(DelayCompleteMinigame());
+    }
+
+    private IEnumerator DelayCompleteMinigame()
+    {
+        yield return new WaitForSeconds(5f);
         OnJobCompleted(new JobCompletedEventArgs());
     }
 }
