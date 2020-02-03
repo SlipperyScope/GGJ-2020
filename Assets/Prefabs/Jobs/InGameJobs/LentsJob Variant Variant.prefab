@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 6276575612314938188, guid: afb8973a34442ca439b8f4ddc31317af,
         type: 3}
       propertyPath: Tools.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6276575612314938188, guid: afb8973a34442ca439b8f4ddc31317af,
         type: 3}
@@ -56,6 +56,16 @@ PrefabInstance:
         type: 3}
       propertyPath: Tools.Array.data[3].Blurb
       value: It's that one over there
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276575612314938188, guid: afb8973a34442ca439b8f4ddc31317af,
+        type: 3}
+      propertyPath: Tools.Array.data[4].Tool
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276575612314938188, guid: afb8973a34442ca439b8f4ddc31317af,
+        type: 3}
+      propertyPath: Tools.Array.data[4].Blurb
+      value: 'Well, I''ve always wanted a sphynx... '
       objectReference: {fileID: 0}
     - target: {fileID: 6276575612314938189, guid: afb8973a34442ca439b8f4ddc31317af,
         type: 3}
