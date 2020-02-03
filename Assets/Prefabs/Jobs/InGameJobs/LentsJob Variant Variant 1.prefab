@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 6276575612314938162, guid: afb8973a34442ca439b8f4ddc31317af,
         type: 3}
       propertyPath: m_Name
-      value: LentsJob Variant
+      value: LentsJob Variant Variant 1
       objectReference: {fileID: 0}
     - target: {fileID: 6276575612314938188, guid: afb8973a34442ca439b8f4ddc31317af,
         type: 3}
@@ -20,7 +20,7 @@ PrefabInstance:
     - target: {fileID: 6276575612314938188, guid: afb8973a34442ca439b8f4ddc31317af,
         type: 3}
       propertyPath: blurb
-      value: Somebody once told the world was gonna roll me
+      value: Somebody once told me the world was gonna roll me
       objectReference: {fileID: 0}
     - target: {fileID: 6276575612314938188, guid: afb8973a34442ca439b8f4ddc31317af,
         type: 3}
