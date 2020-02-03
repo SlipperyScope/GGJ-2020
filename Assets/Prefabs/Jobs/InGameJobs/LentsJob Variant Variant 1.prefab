@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8742778399558701027
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6276575612314938162, guid: afb8973a34442ca439b8f4ddc31317af,
+        type: 3}
+      propertyPath: m_Name
+      value: LentsJob Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276575612314938188, guid: afb8973a34442ca439b8f4ddc31317af,
+        type: 3}
+      propertyPath: Tools.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276575612314938188, guid: afb8973a34442ca439b8f4ddc31317af,
+        type: 3}
+      propertyPath: blurb
+      value: Somebody once told the world was gonna roll me
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276575612314938188, guid: afb8973a34442ca439b8f4ddc31317af,
+        type: 3}
+      propertyPath: Tools.Array.data[0].Tool
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276575612314938188, guid: afb8973a34442ca439b8f4ddc31317af,
+        type: 3}
+      propertyPath: Tools.Array.data[0].Blurb
+      value: I ain't the sharpest tool in the shed
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276575612314938188, guid: afb8973a34442ca439b8f4ddc31317af,
+        type: 3}
+      propertyPath: Tools.Array.data[1].Blurb
+      value: Hey now, you're an allstar
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276575612314938188, guid: afb8973a34442ca439b8f4ddc31317af,
+        type: 3}
+      propertyPath: Tools.Array.data[2].Blurb
+      value: Hey now, you're a rockstar
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276575612314938188, guid: afb8973a34442ca439b8f4ddc31317af,
+        type: 3}
+      propertyPath: Tools.Array.data[2].Tool
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276575612314938189, guid: afb8973a34442ca439b8f4ddc31317af,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 57.045097
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276575612314938189, guid: afb8973a34442ca439b8f4ddc31317af,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -91.29702
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276575612314938189, guid: afb8973a34442ca439b8f4ddc31317af,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276575612314938189, guid: afb8973a34442ca439b8f4ddc31317af,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276575612314938189, guid: afb8973a34442ca439b8f4ddc31317af,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276575612314938189, guid: afb8973a34442ca439b8f4ddc31317af,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276575612314938189, guid: afb8973a34442ca439b8f4ddc31317af,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276575612314938189, guid: afb8973a34442ca439b8f4ddc31317af,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276575612314938189, guid: afb8973a34442ca439b8f4ddc31317af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276575612314938189, guid: afb8973a34442ca439b8f4ddc31317af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276575612314938189, guid: afb8973a34442ca439b8f4ddc31317af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: afb8973a34442ca439b8f4ddc31317af, type: 3}
